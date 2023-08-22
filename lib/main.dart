@@ -104,8 +104,15 @@ class _CommentSectionState extends State<CommentSection> {
           Row(
             children: [
               Expanded(
-                child: TextField(
-                  controller: _controller,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        fillColor: Colors.blueGrey,
+                        hintText: "Type Something..",
+                        hintStyle: TextStyle(color: Colors.black)),
+                    controller: _controller,
+                  ),
                 ),
               ),
               IconButton(
